@@ -3,10 +3,13 @@ package com.than.service;
 import com.than.model.Blog;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IBlogService {
-    List<Blog> findAll();
+    Iterable<Blog> findAll();
+    Optional<Blog> findById(Long id);
+    void deleteById(Long id);
     void save(Blog blog);
-    void delete(Long id);
-    Blog findById(Long id);
+    Iterable<Blog> findAllByBlogContaining(String blog);
+
 }
