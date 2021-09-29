@@ -30,9 +30,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-
-
-
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
@@ -41,12 +38,10 @@ import java.util.Properties;
 @EnableSpringDataWebSupport
 public class AppConfig  implements WebMvcConfigurer, ApplicationContextAware {
     private ApplicationContext applicationContext;
-
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
     }
-
     //Cấu hình Thymleaf
     @Bean
     public SpringResourceTemplateResolver templateResolver() {

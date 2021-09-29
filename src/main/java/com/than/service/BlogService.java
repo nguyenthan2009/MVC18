@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
 @Service
 public class BlogService implements IBlogService{
     @Autowired
@@ -23,8 +22,8 @@ public class BlogService implements IBlogService{
     }
 
     @Override
-    public Iterable<Blog> findAllByBlogContaining(String blog) {
-        return iBlogRepository.findAllByBlogContaining(blog);
+    public Iterable<Blog> findAllByBlogContaining(String title) {
+        return iBlogRepository.findAllByTitleContaining(title);
     }
 
     @Override

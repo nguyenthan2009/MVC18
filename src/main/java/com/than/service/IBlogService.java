@@ -10,6 +10,6 @@ public interface IBlogService {
     Optional<Blog> findById(Long id);
     void deleteById(Long id);
     void save(Blog blog);
-    Iterable<Blog> findAllByBlogContaining(String blog);
+    Iterable<Blog> findAllByBlogContaining(String title);
 
 }

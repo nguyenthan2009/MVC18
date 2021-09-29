@@ -18,6 +18,11 @@ import java.util.Optional;
 public class BlogController {
     @Autowired
     IBlogService blogService;
+    @GetMapping("")
+    public ModelAndView index() {
+        return new ModelAndView("/index");
+    }
+
     @GetMapping("/blog")
     public ModelAndView listBlog(){
         List<Blog> blogList = (List<Blog>) blogService.findAll();

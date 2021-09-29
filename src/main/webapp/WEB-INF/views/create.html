@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -13,5 +13,8 @@
   <input type="text" name="content" th:field="*{content}">
   <button type="submit">Create</button>
 </form>
+<div sec:authorize="isAuthenticated()">
+  <a th:href="@{/}">Home</a> | <a th:href="@{/logout}">Logout</a>
+</div>
 </body>
 </html>
